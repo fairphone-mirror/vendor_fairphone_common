@@ -2,6 +2,14 @@
 # Copyright (C) 2024 FairPhone B.V.
 
 
+# Ringtone
+PRODUCT_PACKAGES += \
+    Sunbeam
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.ringtone=Sunbeam.mp3
+
+
 # ThemePicker
 PRODUCT_PACKAGES += \
     ThemePicker
