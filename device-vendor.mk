@@ -2,6 +2,11 @@
 # Copyright (C) 2024 FairPhone B.V.
 
 
+# ThemePicker
+PRODUCT_PACKAGES += \
+    ThemePicker
+
+
 # Vendor overlays
 PRODUCT_PACKAGES += \
     VendorFrameworksResCommon \
