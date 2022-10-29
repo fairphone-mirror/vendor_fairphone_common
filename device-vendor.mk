@@ -9,5 +9,6 @@ PRODUCT_PACKAGES += \
 
 # Vendor overlays
 PRODUCT_PACKAGES += \
+    Launcher3ResCommon \
     VendorFrameworksResCommon \
     VendorSettingsResCommon
