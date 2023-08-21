@@ -21,3 +21,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.tct.rec.ver="RTW1Z0Z8TA00" \
     ro.tct.study.ver="STW1Z0Z8TA00" \
     ro.tct.sys.ver="YTW1Z0Z8TA00"
+
+
+# Inherit makefile to build and include all proprietary applications
+$(call inherit-product-if-exists, vendor/fairphone/proprietary-apps/device-vendor.mk)
