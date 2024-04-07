@@ -37,4 +37,11 @@
              2 - MODE_NIGHT_YES
     -->
     <integer name="config_defaultNightMode">2</integer>
+
+    <!-- Lock screen Clock -->
+
+    <!-- Name of the font family to use in the default lockscreen clock -->
+    <!-- Make is undefined so that system default font family is used -->
+    <string name="config_clockFontFamily" translatable="false">radikal</string>
+
 </resources>
