@@ -1,0 +1,1 @@
+-include $(QCPATH)/common/msmnile/BoardConfigVendor.mk
