@@ -1,0 +1,3 @@
+#double tap gesture
+allow system_app vendor_sysfs_double_tap:file { getattr open read write };
+
