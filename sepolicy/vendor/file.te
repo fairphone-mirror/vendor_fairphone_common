@@ -1,3 +1,7 @@
 #double tap gesture
 type vendor_sysfs_double_tap, fs_type, sysfs_type, mlstrustedobject;
 
+#battery
+type vendor_sysfs_batteryh, fs_type, sysfs_type, mlstrustedobject;
+
+

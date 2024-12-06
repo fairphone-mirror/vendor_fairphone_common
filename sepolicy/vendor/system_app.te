@@ -1,3 +1,5 @@
 #double tap gesture
 allow system_app vendor_sysfs_double_tap:file { getattr open read write };
-
+allow system_app vendor_sysfs_batteryh:file { read getattr open write };
+allow system_app vendor_sysfs_battery_supply:file {getattr open read write };
+allow system_app vendor_sysfs_battery_supply:dir { search }
