@@ -1,3 +1,5 @@
 #double tap gesture
 /sys/devices/platform/goodix_ts.0/gesture/double_en                  u:object_r:vendor_sysfs_double_tap:s0
 
+/sys/class/qcom-battery/soh                  u:object_r:vendor_sysfs_batteryh:s0
+
