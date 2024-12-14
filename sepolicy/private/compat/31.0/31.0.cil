@@ -1,0 +1,4 @@
+(typeattributeset  vendor_odm_info_prop_31_0 (vendor_odm_info_prop))
+(expandtypeattribute (vendor_odm_info_prop_31_0) true)
+(typeattributeset  vendor_fp_prop_31_0 (vendor_fp_prop))
+(expandtypeattribute (vendor_fp_prop_31_0) true)
