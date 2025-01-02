@@ -1,0 +1,84 @@
+type diag_service, domain;
+type diag_service_exec, exec_type, vendor_file_type, file_type;
+
+# Start by init
+init_daemon_domain(diag_service)
+
+## common rules
+## use diag
+diag_use(diag_service)
+## read/write sysfs files
+allow diag_service sysfs:file rw_file_perms;
+
+## read/write visible storage
+# allow diag_service { sdcard_type media_rw_data_file }:dir create_dir_perms;
+# allow diag_service { sdcard_type media_rw_data_file }:file create_file_perms;
+allow diag_service { mnt_user_file storage_file }:dir r_dir_perms;
+allow diag_service { mnt_user_file storage_file }:lnk_file r_file_perms;
+## execute /vendor/bin/sh
+allow diag_service vendor_shell_exec:file rx_file_perms;
+## execute /vendor/bin/toybox
+allow diag_service vendor_toolbox_exec:file rx_file_perms;
+## allow to reach block devices in /dev/block.
+allow diag_service block_device:dir search;
+
+## audioloop_cmd.c:
+#set_prop(diag_service, audio_loop_prop)
+## execute mm-audio-ftm (ftm.dut.instance)
+# allow diag_service system_file:file rx_file_perms;
+allow diag_service audio_device:dir search;
+allow diag_service audio_device:chr_file rw_file_perms;
+
+## debug_on.c:
+## set property sys.usb.config
+# set_prop(diag_service, system_radio_prop)
+
+## emmc_cmd.c:
+## read from /proc/partitions
+allow diag_service proc:file r_file_perms;
+
+## nv_bk.c:
+## access qmi service
+allow diag_service self:socket create_socket_perms;
+allowxperm diag_service self:socket ioctl msm_sock_ipc_ioctls;
+## create dirs and files in /cache
+# allow diag_service cache_file:lnk_file r_file_perms;
+# allow diag_service cache_file:dir create_dir_perms;
+# allow diag_service cache_file:file create_file_perms;
+## read/write to tunning block device
+allow diag_service vendor_modem_efs_partition_device:blk_file rw_file_perms;
+
+## rdata.cpp:
+#allow diag_service { alipay_service fty_service }:vndservicemanager find;
+## call secsvr via binder
+#binder_call(diag_service, vndservicemanager);
+#binder_call(diag_service, secsvr)
+
+## sensors_check.c:
+## read sensors data
+allow diag_service mnt_vendor_file:dir search;
+allow diag_service vendor_persist_sensors_file:dir r_dir_perms;
+allow diag_service vendor_persist_sensors_file:file r_file_perms;
+
+## shutdown.c:
+## shutdown device
+allow diag_service self:capability sys_boot;
+
+## skd.c:
+## read/write/chmod file /oempersist/(FT.txt|MMI.txt)
+#allow diag_service oem_persist_file:dir r_dir_perms;
+#allow diag_service oem_persist_file:file create_file_perms;
+
+## suspend.c:
+## read/write/ioctl /dev/input/event0
+allow diag_service input_device:dir r_dir_perms;
+allow diag_service input_device:chr_file rw_file_perms;
+
+## trace_cmd.c:
+## read/write traceability block device
+allow diag_service vendor_traceability_block_device:blk_file rw_file_perms;
+
+## charging_on.c:
+## write to /sys/class/power_supply/battery/charging_enabled
+allow diag_service vendor_sysfs_battery_supply:dir r_dir_perms;
+allow diag_service vendor_sysfs_battery_supply:file w_file_perms;

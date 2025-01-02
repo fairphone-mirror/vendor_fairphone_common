@@ -6,8 +6,13 @@
 # tctd
 /vendor/bin/tctd                u:object_r:tctd_exec:s0
 /dev/socket/tctd                u:object_r:tctd_socket:s0
+
 /vendor/bin/tdc                 u:object_r:tctd_exec:s0
 /vendor/bin/trace_util          u:object_r:tctd_exec:s0
+
+
+# diag_service
+/vendor/bin/diag_service     u:object_r:diag_service_exec:s0
 
 #double tap gesture
 /sys/devices/platform/goodix_ts.0/gesture/double_en                  u:object_r:vendor_sysfs_double_tap:s0
