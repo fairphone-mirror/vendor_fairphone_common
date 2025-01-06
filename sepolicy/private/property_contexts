@@ -7,3 +7,11 @@ ro.vendor.fp.                   u:object_r:vendor_fp_prop:s0
 persist.vendor.fp.              u:object_r:vendor_fp_prop:s0
 #- Common
 
+#Phone timer: From the first user start-up of the phone.
+persist.sys.fp.tft.date            u:object_r:tft_prop:s0
+sys.fp.tft            u:object_r:tft_prop:s0
+
+persist.sys.is_first_boot            u:object_r:tft_prop:s0
+persist.sys.charge_mode            u:object_r:tft_prop:s0
+persist.sys.bat_charging_time      u:object_r:tft_prop:s0
+

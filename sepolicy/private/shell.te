@@ -1,0 +1,3 @@
+#+ Common
+get_prop(shell, vendor_odm_info_prop)
+#- Common
