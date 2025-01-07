@@ -15,6 +15,9 @@
 # diag_service
 /vendor/bin/diag_service     u:object_r:diag_service_exec:s0
 
+# ftycmd
+/vendor/bin/ftycmd u:object_r:vendor_ftycmd_exec:s0
+
 #double tap gesture
 /sys/devices/platform/goodix_ts.0/gesture/double_en                  u:object_r:vendor_sysfs_double_tap:s0
 

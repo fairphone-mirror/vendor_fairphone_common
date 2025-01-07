@@ -1,0 +1,10 @@
+type vendor_ftycmd, domain;
+type vendor_ftycmd_exec, exec_type, file_type, vendor_file_type;
+
+init_daemon_domain(vendor_ftycmd)
+
+set_prop(vendor_ftycmd, vendor_odm_info_prop)
+
+allow vendor_ftycmd mnt_vendor_file:dir { search };
+allow vendor_ftycmd vendor_persist_data_file:dir { search };
+allow vendor_ftycmd vendor_persist_data_file:file rw_file_perms;

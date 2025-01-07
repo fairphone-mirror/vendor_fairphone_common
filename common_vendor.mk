@@ -6,6 +6,7 @@ endif
 
 PRODUCT_PACKAGES += tctd mm-audio-ftm tdc trace_util
 PRODUCT_PACKAGES += diag_service diag_client
+PRODUCT_PACKAGES += ftycmd genkb
 
 
 include device/fairphone/common/sepolicy/SEPolicy_vendor.mk
