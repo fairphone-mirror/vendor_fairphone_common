@@ -1,0 +1,11 @@
+userdebug_or_eng(`
+allow feedback_app vendor_gles_data_file:dir search;
+')
+
+
+allow feedback_app qlogd_data_file:dir { getattr search open read write add_name remove_name rmdir  setattr create };
+allow feedback_app qlogd_data_file:file { getattr open read write create write setattr };
+
+
+allow feedback_app vendor_wifi_vendor_data_file:dir { getattr read search open };
+allow feedback_app vendor_wifi_vendor_data_file:file { read getattr open };

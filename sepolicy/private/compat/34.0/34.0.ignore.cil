@@ -5,5 +5,7 @@
 (typeattribute new_objects)
 (typeattributeset new_objects
   ( new_objects
+    feedback_app
+    wifi_vendor_data_file
     ))
 
