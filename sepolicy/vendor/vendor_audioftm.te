@@ -1,0 +1,10 @@
+allow vendor_audioftm property_socket:sock_file { write };
+allow vendor_audioftm init:unix_stream_socket { connectto };
+get_prop(vendor_audioftm, vendor_fp_prop)
+set_prop(vendor_audioftm, vendor_fp_prop)
+ 
+allow vendor_audioftm vendor_audioftm:capability { setgid };
+allow vendor_audioftm mnt_user_file:dir { search };
+allow vendor_audioftm mnt_user_file:lnk_file { read };
+allow vendor_audioftm fuse:dir { search write add_name };
+allow vendor_audioftm fuse:file { create write open };
