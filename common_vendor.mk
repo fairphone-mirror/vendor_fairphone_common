@@ -10,3 +10,4 @@ PRODUCT_PACKAGES += ftycmd genkb
 
 
 include device/fairphone/common/sepolicy/SEPolicy_vendor.mk
+include vendor/focaltech/fingerprint/sepolicy.mk
