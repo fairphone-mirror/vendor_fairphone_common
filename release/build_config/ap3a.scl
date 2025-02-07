@@ -1,0 +1,10 @@
+// SPDX-License-Identifier: Apache-2.0
+// Copyright (C) 2025 Fairphone B.V.
+
+load("//build/make/core/release_config.scl", "value")
+
+values = [
+    # keep-sorted start numeric=yes
+    value("RELEASE_ACONFIG_VALUE_SETS", "aconfig_value_set-fairphone-ap3a"),
+    # keep-sorted end
+]
