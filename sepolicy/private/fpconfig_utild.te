@@ -1,0 +1,10 @@
+type fpconfig_utild, domain, coredomain;
+type fpconfig_utild_exec, exec_type, file_type, system_file_type;
+
+init_daemon_domain(fpconfig_utild)
+
+allow fpconfig_utild block_device:dir search;
+allow fpconfig_utild fpconfig_block_device:blk_file rw_file_perms;
+
+set_prop(fpconfig_utild, system_prop)
+set_prop(fpconfig_utild, tft_prop)

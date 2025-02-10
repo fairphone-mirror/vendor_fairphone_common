@@ -1,0 +1,3 @@
+# fpconfig_persist, fpconfig
+type fpconfig_block_device, dev_type;
+
