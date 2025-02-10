@@ -1,2 +1,4 @@
 user=_app seinfo=platform name=com.android.systemui domain=platform_app type=app_data_file
 
+# For com.android.bluetooth from apex.
+user=bluetooth isPrivApp=true name=com.android.bluetooth domain=bluetooth type=bluetooth_data_file
