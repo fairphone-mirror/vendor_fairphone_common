@@ -15,7 +15,7 @@ persist.sys.is_first_boot            u:object_r:tft_prop:s0
 persist.sys.charge_mode            u:object_r:tft_prop:s0
 persist.sys.bat_charging_time      u:object_r:tft_prop:s0
 persist.sys.bat_charging_first     u:object_r:tft_prop:s0
-persist.sys.setflashlight          u:object_r:tft_prop:s0
+persist.odm.setflashlight          u:object_r:tft_prop:s0
 
 vendor.ftm. 		u:object_r:vendor_fp_prop:s0
 
