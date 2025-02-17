@@ -2,4 +2,5 @@
 get_prop(system_app, vendor_odm_info_prop)
 get_prop(system_app, vendor_fp_prop)
 get_prop(system_app, tft_prop)
+set_prop(system_app, system_fp_prop)
 #- Common

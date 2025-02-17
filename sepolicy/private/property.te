@@ -1,2 +1,3 @@
 #Phone timer: From the first user start-up of the phone.
 system_internal_prop(tft_prop)
+system_internal_prop(system_fp_prop)
