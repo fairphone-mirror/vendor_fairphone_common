@@ -23,3 +23,5 @@
 
 /sys/class/qcom-battery/soh                  u:object_r:vendor_sysfs_batteryh:s0
 
+#set wlan mac for FPS-70
+/vendor/bin/setwlanmac.sh                  u:object_r:vendor_wlan_mac_exec:s0
