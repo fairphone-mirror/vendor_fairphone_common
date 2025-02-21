@@ -7,6 +7,8 @@ ro.vendor.fp.                   u:object_r:vendor_fp_prop:s0
 persist.vendor.fp.              u:object_r:vendor_fp_prop:s0
 #- Common
 
+ro.vendor.hw_version            u:object_r:vendor_odm_info_prop:s0
+
 #Phone timer: From the first user start-up of the phone.
 persist.sys.fp.tft.date            u:object_r:tft_prop:s0
 sys.fp.tft            u:object_r:tft_prop:s0
