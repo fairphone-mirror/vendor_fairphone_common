@@ -26,3 +26,4 @@ persist.odm.double_en              u:object_r:system_fp_prop:s0
 persist.odm.screen_mode            u:object_r:system_fp_prop:s0
 
 odm.face_unlock                    u:object_r:system_fp_prop:s0
+persist.odm.touch_sensitivity      u:object_r:system_fp_prop:s0
