@@ -1,3 +1,5 @@
+type vendor_oembin_block_device, dev_type;
+
 # fpconfig_persist, fpconfig
 type fpconfig_block_device, dev_type;
 

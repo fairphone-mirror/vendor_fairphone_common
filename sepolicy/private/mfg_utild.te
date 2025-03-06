@@ -1,0 +1,48 @@
+type mfg_utild, coredomain, domain;
+type mfg_utild_exec, exec_type, file_type, system_file_type;
+type mfgutil_socket, file_type, coredomain_socket;
+
+#The process will be started by init
+init_daemon_domain(mfg_utild)
+
+allow mfg_utild mfg_utild_exec:file execute_no_trans;
+
+#Allow mfg_util command line to access this socket
+allow mfg_util mfg_utild:unix_stream_socket { connect read write connectto };
+allow mfg_util mfgutil_socket:sock_file rw_file_perms;
+allow shell mfg_utild:unix_stream_socket { connect read write connectto };
+allow shell mfgutil_socket:sock_file rw_file_perms;
+
+#To allow creating of socket file and making it available to mfg_util
+allow mfg_utild mfgutil_socket:sock_file { create read write setattr unlink };
+#allow mfg_utild self:capability fowner;
+#allow mfg_utild self:capability dac_override;
+
+# Allow to shutdown device
+set_prop(mfg_utild, powerctl_prop)
+
+# allow to reach block devices in /dev/block.
+allow mfg_utild block_device:dir search;
+# read/write to oembin block device
+allow mfg_utild vendor_oembin_block_device:blk_file rw_file_perms;
+
+# Task: 8281777
+allow mfg_utild userdata_block_device:blk_file rw_file_perms;
+allow mfg_utild e2fs_exec:file rx_file_perms;
+allow mfg_utild fsck_exec:file rx_file_perms;
+
+allow shell mfg_utild_exec:file { getattr execute };
+
+get_prop(mfg_utild, storage_config_prop)
+
+
+################################################################################
+
+type mfg_util, domain, coredomain;
+type mfg_util_exec, exec_type, file_type, system_file_type;
+
+allow mfg_util mfgutil_socket:sock_file { read write };
+allow shell mfgutil_socket:sock_file { read write };
+
+allow shell mfg_util_exec:file { execute execute_no_trans getattr open read map };
+

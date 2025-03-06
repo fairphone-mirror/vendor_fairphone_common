@@ -1,8 +1,14 @@
+# Common
+/dev/block/platform/soc/1d84000.ufshc/by-name/oembin u:object_r:vendor_oembin_block_device:s0
 
 # fpconfig, fpconfig_persist
 /dev/block/platform/soc/1d84000.ufshc/by-name/fpconfig  			u:object_r:fpconfig_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/fpconfig_persist      u:object_r:fpconfig_block_device:s0
 
+# mfg_util
+/system_ext/bin/mfg_utild                       u:object_r:mfg_utild_exec:s0
+/system_ext/bin/mfg_util                        u:object_r:mfg_util_exec:s0
+/dev/socket/mfgutil                             u:object_r:mfgutil_socket:s0
 
 # fpconfig_util
 /system_ext/bin/fpconfig_util              u:object_r:fpconfig_utild_exec:s0
