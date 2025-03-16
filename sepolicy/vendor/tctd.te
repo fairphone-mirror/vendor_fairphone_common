@@ -21,6 +21,9 @@ set_prop(tctd, ctl_stop_prop)
 # for btmac
 get_prop(vendor_init, vendor_odm_info_prop)
 
+# for trace_util
+get_prop(vendor_init, vendor_fp_prop)
+
 # execute
 allow tctd vendor_file:file rx_file_perms;
 
