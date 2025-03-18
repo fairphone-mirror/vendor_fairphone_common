@@ -7,7 +7,8 @@ endif
 PRODUCT_PACKAGES += tctd mm-audio-ftm tdc trace_util
 PRODUCT_PACKAGES += diag_service diag_client
 PRODUCT_PACKAGES += ftycmd genkb
-
+TARGET_SCREEN_DENSITY := xxxhdpi
+TARGET_RECOVERY_UI_MARGIN_HEIGHT := 100
 
 include device/fairphone/common/sepolicy/SEPolicy_vendor.mk
 include vendor/focaltech/fingerprint/sepolicy.mk
