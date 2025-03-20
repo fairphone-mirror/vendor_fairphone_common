@@ -10,5 +10,8 @@ PRODUCT_PACKAGES += ftycmd genkb
 TARGET_SCREEN_DENSITY := xxxhdpi
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 100
 
+PRODUCT_COPY_FILES += \
+    device/fairphone/common/fstab_factory.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab_factory.qcom
+
 include device/fairphone/common/sepolicy/SEPolicy_vendor.mk
 include vendor/focaltech/fingerprint/sepolicy.mk
