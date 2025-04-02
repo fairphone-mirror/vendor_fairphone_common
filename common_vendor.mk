@@ -10,6 +10,10 @@ PRODUCT_PACKAGES += ftycmd genkb
 TARGET_SCREEN_DENSITY := xxxhdpi
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 100
 
+# FPS-1575, For RKP , widevine
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.wv.oemcrypto.debug.enable_prov40=true
+
 PRODUCT_COPY_FILES += \
     device/fairphone/common/fstab_factory.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab_factory.qcom
 
