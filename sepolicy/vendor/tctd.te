@@ -73,3 +73,8 @@ allow tctd mnt_user_file:lnk_file read;
 
 # console
 allow tctd tctd_socket:sock_file write;
+
+get_prop(vendor_init, shell_prop)
+set_prop(vendor_init, vendor_ssr_prop)
+
+
