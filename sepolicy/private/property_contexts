@@ -33,4 +33,4 @@ persist.odm.charge_disable         u:object_r:system_fp_prop:s0
 odm.charge_speed_limit             u:object_r:system_fp_prop:s0
 
 persist.sys.oem.debug.             u:object_r:debug_prop:s0
-
+persist.odm.ccode                  u:object_r:system_fp_prop:s0
