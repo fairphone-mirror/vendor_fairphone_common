@@ -8,3 +8,4 @@ allow fpconfig_utild fpconfig_block_device:blk_file rw_file_perms;
 
 set_prop(fpconfig_utild, system_prop)
 set_prop(fpconfig_utild, tft_prop)
+set_prop(fpconfig_utild, system_fp_prop)
