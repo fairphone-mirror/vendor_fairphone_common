@@ -22,6 +22,7 @@ persist.odm.setflashlight          u:object_r:tft_prop:s0
 
 vendor.ftm. 		u:object_r:vendor_fp_prop:s0
 
+sys.fp.update_tar                  u:object_r:system_fp_prop:s0
 
 persist.odm.double_en              u:object_r:system_fp_prop:s0
 persist.odm.screen_mode            u:object_r:system_fp_prop:s0
