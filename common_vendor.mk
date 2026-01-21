@@ -19,3 +19,7 @@ PRODUCT_COPY_FILES += \
 
 include device/fairphone/common/sepolicy/SEPolicy_vendor.mk
 include vendor/focaltech/fingerprint/sepolicy.mk
+
+ifeq ($(TARGET_BUILD_VARIANT),user)
+PRODUCT_PROPERTY_OVERRIDES += persist.vendor.ssr.restart_level=ALL_ENABLE
+endif
